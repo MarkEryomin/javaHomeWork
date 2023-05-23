@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class InternetShop {
-    private static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    private static final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
     private static List<NoteBook> listOfBook;
 
     public static void main(String[] args) throws IOException {
@@ -24,12 +24,13 @@ public class InternetShop {
 
     public static void welcome() throws IOException {
 //        Scanner scanner = new Scanner(System.in);
-        System.out.print("Привет, дорогой друг, добро пожаловать в магазин, пожалуйста, укажите, какие свойства ноутбука вы хотите выбрать\n" +
-                "1 - RAM\n" +
-                "2 - HDD\n" +
-                "3 - Operating System\n" +
-                "4 - Color\n" +
-                "Что вы выберете : ");
+        System.out.print("""
+                Привет, дорогой друг, добро пожаловать в магазин, пожалуйста, укажите, какие свойства ноутбука вы хотите выбрать
+                1 - RAM
+                2 - HDD
+                3 - Operating System
+                4 - Color
+                Что вы выберете :\s""");
         String wishes = bufferedReader.readLine();
         switch (wishes) {
             case "1" -> {
